@@ -56,7 +56,7 @@ def salvar_resultados(nome_arquivo, dados, titulo):
 # EXEMPLO DE USO
 # -----------------------------
 if __name__ == "__main__":
-    vcf_path = "homoplasmic_af_filtered_1171.vcf"  # Substitua pelo caminho real
+    vcf_path = "file.vcf"  # Substitua pelo caminho real
     posicoes = ["827","1095","1189","1243","1555","10398","14484","11778"]  # Substitua pelas posições desejadas
 
     com, sem = extrair_genotipos(vcf_path, posicoes)
