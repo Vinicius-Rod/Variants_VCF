@@ -1,13 +1,13 @@
 Extrair variantes de um VCF
 
-```shell
+```python
 import sys
 import pandas as pd
 ```
 
 Processa um arquivo VCF, extrai informações de variantes e as anota em um novo arquivo
 
-```shell
+```python
 def process_vcf(input_vcf_path, output_txt_path):
     with open(input_vcf_path, 'r') as infile, open(output_txt_path, 'w') as outfile:
         for line in infile:
@@ -49,7 +49,7 @@ if __name__ == "__main__":
 
 
 Lista de variantes de interesse
-```shell
+```python
 variants_of_interest = [
    {'chr': 'chrM', 'pos': 59, 'ref': 'T', 'alt': 'C'},
    {'chr': 'chrM', 'pos': 64, 'ref': 'C', 'alt': 'T'}]
@@ -57,13 +57,13 @@ variants_of_interest = [
 
 Nome do arquivo VCF
 
-```shell
+```python
 vcf_file = 'file.vcf'
 ```
 
 Lista para armazenar os resultados
 
-```shell
+```python
 results = []
 
 try:
@@ -114,13 +114,13 @@ except Exception as e:
 
 Cria um DataFrame a partir dos resultados
 
-```shell
+```python
 df = pd.DataFrame(results)
 ```
 
 Salva os resultados em um arquivo Excel
 
-```shell
+```python
 output_file = 'file.xlsx'
 df.to_excel(output_file, index=False)
 
@@ -129,7 +129,7 @@ print(f"Resultados salvos em {output_file}")
 
 Extrair de outra forma
 
-```shell
+```python
 def extrair_genotipos(vcf_file, posicoes_alvo):
     """
     Lê um arquivo VCF e retorna dois dicionários:
