@@ -1,6 +1,6 @@
 Extrair variantes de um VCF
 
-'''js
+'''bash
 import sys
 import pandas as pd
 '''
