@@ -30,11 +30,8 @@ def process_vcf(input_vcf_path, output_txt_path):
 
             variant_info = {'chr': chrom, 'pos': pos, 'ref': ref, 'alt': alt}
             outfile.write(str(variant_info) + '\n')
-```
-```bash
+
 if __name__ == "__main__":
-    # Substitua 'seu_arquivo.vcf' pelo caminho do seu arquivo VCF de entrada
-    # e 'variantes_anotadas.txt' pelo nome do arquivo de saída desejado.
     input_vcf = 'file.vcf'  
     output_txt = 'file_var.txt'
 
