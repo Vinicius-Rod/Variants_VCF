@@ -9,13 +9,6 @@ Processa um arquivo VCF, extrai informações de variantes e as anota em um novo
 
 ```bash
 def process_vcf(input_vcf_path, output_txt_path):
-    """
-    Processa um arquivo VCF, extrai informações de variantes e as anota em um novo arquivo.
-
-    Args:
-        input_vcf_path (str): Caminho para o arquivo VCF de entrada.
-        output_txt_path (str): Caminho para o arquivo de texto de saída.
-    """
     with open(input_vcf_path, 'r') as infile, open(output_txt_path, 'w') as outfile:
         for line in infile:
             if line.startswith('#'):  # Ignora linhas de cabeçalho
